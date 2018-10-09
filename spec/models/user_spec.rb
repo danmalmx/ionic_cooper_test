@@ -50,4 +50,10 @@ RSpec.describe User, type: :model do
             end
         end
   end
+
+    describe 'Relations' do
+        it { is_expected.to belong_to :user }
+    end
+    end
+end
 end
