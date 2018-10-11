@@ -13,7 +13,7 @@ export class HomePage {
     public navCtrl: NavController, 
     public person: PersonProvider
     ) {
-    this.user = { distance: 1000, age: 20 };
+    this.user = { distance: 1000, age: 20, gender: 'female' };
   }
 
   calculate() {
