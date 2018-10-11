@@ -9,8 +9,3 @@ RSpec.configure do |config|
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
 end
-
-.rspec
---color
---require rails_helper
---format documentation  
