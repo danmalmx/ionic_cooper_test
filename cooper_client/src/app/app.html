@@ -1,46 +1,19 @@
 <ion-menu [content]="content">
   <ion-header>
     <ion-toolbar>
-      <ion-title name="page-one">Home</ion-title>
+      <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
-
+ 
   <ion-content>
     <ion-list>
-        <ion-item>
-          <ion-label>Distance</ion-label>
-          <ion-input type="number" [(ngModel)]="user.distance"></ion-input>
-        </ion-item> 
-        <ion-item>
-          <ion-label>Gender</ion-label>
-          <ion-select [(ngModel)]="user.gender">
-            <ion-option value="female">Female</ion-option>
-            <ion-option value="male">Male</ion-option>            
-          </ion-select>
-        </ion-item>
-
-        <ion-item>
-          <ion-label>
-            Age: 
-          <ion-badge *ngIf="user.age">{{user.age}}</ion-badge>  
-          </ion-label>
-          <ion-range min="10" max="120" [(ngModel)]="user.age">
-            <ion-label range-left>10</ion-label>
-            <ion-label range-right>120</ion-label>
-          </ion-range>
-        </ion-item>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
     </ion-list>
-
-    <button block ion-button (click)="calculate">Calculate</button>
   </ion-content>
-
-</ion-menu>
-
-<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
-<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
-
-
-<!-- 
-<button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-    {{p.title}}
-  </button> -->
+ 
+ </ion-menu>
+ 
+ <!-- Disable swipe-to-go-back because it’s poor UX to combine STGB with side menus -->
+ <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
