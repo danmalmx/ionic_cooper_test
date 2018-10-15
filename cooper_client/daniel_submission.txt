@@ -1,0 +1,2 @@
+Back-end: 
+Client: https://github.com/danmalmx/ionic_cooper_test/tree/development

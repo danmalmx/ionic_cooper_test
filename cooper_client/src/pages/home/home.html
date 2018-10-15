@@ -29,6 +29,11 @@
             <ion-label range-right>120</ion-label>
         </ion-range>
     </ion-item>
+    <button ion-item (click)="loginPopUp()" *ngIf="!currentUser">
+        Login
+    </button>
+    <button ion-item (click)="logout()" *ngIf="currentUser">
+    </button>
 </ion-list>
 
 <button block ion-button (click)="calculate()">Calculate</button>
